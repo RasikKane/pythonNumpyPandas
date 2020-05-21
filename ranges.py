@@ -56,10 +56,10 @@ class rangeUnitTest(unittest.TestCase):
     def test_npRange(self):
         self.assertEqual(npRange(np.arange(1, 10)), rangeUnitTest.result)
 
-    def test_nExpr(self):
+    def test_nExpr1(self):
         self.assertEqual(nExpr(np.arange(1, 10), 1), rangeUnitTest.result)
 
-    def test_nExpr(self):
+    def test_nExpr4(self):
         self.assertEqual(nExpr(np.arange(1, 10), 4), rangeUnitTest.result)
 
 # Calling the main function from unittest. This will cause to run all the test_ methods
