@@ -16,6 +16,7 @@ def np_f(x):
 def getExpr():
     return '3 * log(np_a) + cos(np_a) ** 2'
 
+
 # Evaluation time for pythonic range
 def pythonRange(a):
     start = time.time()
