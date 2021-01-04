@@ -32,5 +32,20 @@ def code2():
         print(k, v)
 '''
 
-print(timeit.timeit(stmt=testcode1, setup=import_module)) # typically slower: 0.0426984
-print(timeit.timeit(stmt=testcode2, setup=import_module)) # typically faster : 0.0401631
+testcode3 = ''' 
+def code2():
+    test_string = "linkedin"
+    test_string = test_string.lower()
+    d = {}
+    for i in test_string:
+        d.setdefault(i, 0)
+        d[i] += 1
+    for (k, v) in d.items():
+        print(k, v)
+'''
+
+print(timeit.timeit(stmt=testcode1, setup=import_module)) # typically slower: 0.0445349
+print(timeit.timeit(stmt=testcode2, setup=import_module)) # typically faster : 0.0412101
+print(timeit.timeit(stmt=testcode3, setup=import_module)) # typically faster : 0.0406002
+
+
